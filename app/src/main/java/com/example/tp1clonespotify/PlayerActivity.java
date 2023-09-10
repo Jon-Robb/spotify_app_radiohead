@@ -164,6 +164,7 @@ public class PlayerActivity extends AppCompatActivity {
         instance.pause();
         instance.seDeconnecter();
     }
+
 }
 
 

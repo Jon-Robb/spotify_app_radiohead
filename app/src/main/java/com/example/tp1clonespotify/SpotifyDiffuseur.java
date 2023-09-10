@@ -1,6 +1,7 @@
 package com.example.tp1clonespotify;
 
 import android.content.Context;
+import android.util.Log;
 
 
 import com.spotify.android.appremote.api.ConnectionParams;
@@ -72,7 +73,11 @@ public class SpotifyDiffuseur {
                                     }
                                 });
                     }
-                    public void onFailure(Throwable throwable) { }
+                    public void onFailure(Throwable throwable) {
+                        // Log or display the error to help diagnose issues
+                        Log.e("SpotifyAppRemote", "Connection failed: ", throwable);
+                    }
+
 
                 });
     }
@@ -130,7 +135,4 @@ public class SpotifyDiffuseur {
                     }
                 });
     }
-
-
-
 }
